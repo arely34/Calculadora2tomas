@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcd.bootstrapcdn.con/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<title>Calculadora de movimiento</title>
+</head>
+<body>
+	<nav class="navbar navbar-light" style="background-color: #517DBA;">
+    <!-- Navbar content -->
+  </nav>
+   <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Calculadora de Fisica</h1>
+    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+  </div>
+</div>
+<form id="Formulario">
+    <label for="distancia">Distancia</label>
+    <input type="text" id="distancia" name="distancia">
+    <select id="distanciaUnidad">
+    <option Value="metros">Metros</option>
+    <option Value="pies">Pies</option>
+    </select>
+    <br>
+    <label for="tiempo">Tiempo:</label>
+    <input type="text" id="tiempo" name="tiempo">
+    <select id="tiempoUnidad">
+        <option Value="segundos">Segundos</option>
+        <option Value="horas">Horas</option>
+        </select>
+        <br>
+    <label for="velocidadUnidad">Unidades de velocidad:</label>
+    <input type="text" id="velocidadUnidad" name="velocidadUnidad">
+    <select id="velocidadUnidad">
+        <option Value="metros_por_segundo">m/s</option>
+        <option Value="pies_por_segundo">ft/s</option>
+        <option Value="kilometros_por_segundo">km/s</option>
+        <option Value="millas_por_hora">mph</option>
+        </select>
+        <br>
+        <br>
+        <button type="button" class="btn btn-info" value="Calcular" onclick="Calcular()">Calcular</button>
+</body>
+</html>
