@@ -1,0 +1,116 @@
+<!DOCTYPE html> 
+ <html> 
+ <head> 
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js></script> 
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css> 
+         <link rel="stylesheet" href="https://maxcd.bootstrapcdn.con/bootstrap/3.3.1/css/bootstrap-theme.min.css> 
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js></script> 
+         <title>Calculadora de movimiento</title> 
+ </head> 
+ <body> 
+         <nav  class="navbar navbar-light" style="background-color: #517DBA;"> 
+     <!-- Navbar content --> 
+   </nav> 
+    <div class= jumbotron jumbotron-fluid > 
+   <div class="container"> 
+     <h1 class= display-4>Calculadora de Fisica</h1> 
+     <p class="lead"> Los elementos que se consideran necesarios para facilitar el aprendizaje de conceptos 
+        y la aplicaciòn de modelos matemàticos en el campo de la fìsica, son algunos conceptos de las matemàticas como: </p> 
+        <p><li>sistemas de unidades, <li>magnitudes escalares, <li>magnitudes vectoriales, <li>notaciòn cientìfica, <li>anàlisis dimensionale.</p> 
+   </div> 
+ </div> 
+ <form id="Formulario"> 
+     <label for="distancia">Distancia</label> 
+     <input type="text" id="distancia" name="distancia"> 
+     <select id="distanciaUnidad"> 
+     <option Value="metros">Metros</option> 
+     <option Value="pies">Pies</option> 
+     </select> 
+     <br> 
+     <label for="tiempo">Tiempo:</label> 
+     <input type="text" id="tiempo" name="tiempo"> 
+     <select id="tiempoUnidad"> 
+         <option Value="segundos">Segundos</option> 
+         <option Value="horas">Horas</option> 
+         </select> 
+         <br> 
+     <label for="velocidadUnidad">Unidades de velocidad:</label> 
+     <input type="text" id="velocidadUnidad" name="velocidadUnidad"> 
+     <select id="velocidadUnidad"> 
+         <option Value="metros_por_segundo">m/s</option> 
+         <option Value="pies_por_segundo">ft/s</option> 
+         <option Value="kilometros_por_segundo">km/s</option> 
+         <option Value="millas_por_hora">mph</option> 
+         </select> 
+         <br> 
+         <br> 
+         <button type="button" class="btn btn-info" value="Calcular" onclick="Calcular()">Calcular</button> 
+         </form> 
+         <br> 
+         <p style= color: #3d3ded; background-color:#517DBA>Velocidad: <span id="velocidad"></span></p> 
+  
+         <script> 
+             function Calcular(){ 
+                 const distancia= parseFloat(document.getElementById('distancia').value); 
+                  
+                 console.log("La distancia es: " +distancia); 
+                 document.getElementById('velocidad'). 
+                 textContent=distancia.toFixes(4) + '' +distancia; 
+             } 
+         </script>  
+  funcion Calculadora(){
+  const distancia = parseFloat(document.getElementById('distancia'.value);
+   const tiempo = parseFloat(document.getElementById('tiempo'.value);
+
+   //estas 3 variables son para poner las unidades metricas
+   const distanciaUnidad = parseFloat(document.getElementById('distanciaUnidad'.value);
+   const tiempoaUnidad = parseFloat(document.getElementById('tiempoUnidad'.value);
+   const velocidadUnidad = parseFloat(document.getElementById('velocidadUnidad'.value);
+   
+   //convertir unidadaes a sistemas metricos internacional
+    let distanciaSI = 0; //<--Modifico esta linea
+     let tiempoSI = 0; //<--Modifico esta linea
+   
+   //Dependiendo las unidades que seleccionaron, uso este:
+   if(distanciaUnidad === 'metros'){
+   distanciaSI=distancia;
+  }else if(distanciaUnidad === 'pies'){
+ distanciaSI = distanciacai/3.281;//Son 3 pes por cada metro,por eso la divicion de 3.281, para la informacion,
+  checar los puntos de fisica )  
+}
+if (tiempoUnidad === 'segundo'){
+tiempoSI = tiempo;
+}else if(tiempoUnidad === 'horas'){
+ tiempoSI = tiempo * 3600;//lo mismo que arriba, multiplico 3600 para la cantidad de segundos  en un minuto (60) por las de 60 minutos en una hora 
+}
+//con el siguiente codigo, voy a calcular la velocidad,aceleracion y la rapidez (aun que no hay formula , por lo pronto para ella, solo dire que es igual a la velocidad)
+ Let velocidad = 0;
+  Let aceleracion = 0;
+   Let rapidez = 0;
+
+   if (velocidadUnidad === 'metros_por_segundo'){
+ velocidad = distanciaSI / tiempoSI;
+ rapides = velocidad;
+ aceleracion = velocidad / tiempoSi;
+}
+ else if (velocidadUnidad === 'pies_por_segundo'){
+ velocidad = (distanciaSI * 3.281) / tiempoSI;
+ rapides = velocidad;
+ aceleracion = velocidad / tiempoSi;
+}
+else if (velocidadUnidad === 'kilometros_por_segundo'){
+ velocidad = (distanciaSI / 1000) / (tiempoSI /3600);
+ rapides = velocidad;
+ aceleracion = velocidad / (tiempoSi / 3600);
+}
+else if (velocidadUnidad === 'millas_por_hora'){
+ velocidad = (distanciaSI / 1609) / (tiempoSI / 3600);
+ rapides = velocidad;
+ aceleracion = velocidad / (tiempoSi / 3600);
+}
+//mostrar los resultados 
+ 
+ Let resultado =
+
+ </body> 
+ </html>
